@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+sqlalchemy
+psycopg[binary]
+pyjwt
+passlib[bcrypt]
+bcrypt==4.0.1
+sparqlwrapper
+groq
+python-multipart

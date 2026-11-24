@@ -1,0 +1,88 @@
+# SentinelOps — orquestación de servicios.
+# Los valores se toman del archivo .env (copia .env.example a .env y complétalo).
+
+services:
+  postgres_db:
+    image: postgres:15-alpine
+    container_name: devsecops_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-devuser}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-devpassword123}
+      POSTGRES_DB: ${POSTGRES_DB:-devsecops_logs}
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-devuser} -d ${POSTGRES_DB:-devsecops_logs}"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+
+  fuseki:
+    image: stain/jena-fuseki:latest
+    container_name: devsecops_fuseki
+    restart: always
+    environment:
+      ADMIN_PASSWORD: ${FUSEKI_ADMIN_PASSWORD:-admin}
+      FUSEKI_DATASET_1: ds
+    ports:
+      - "127.0.0.1:3030:3030"
+    volumes:
+      - fuseki_data:/fuseki
+
+  # Contenedor de un solo uso: sube la ontología (.ttl) al dataset "ds" de Fuseki.
+  fuseki_loader:
+    image: curlimages/curl:latest
+    container_name: devsecops_fuseki_loader
+    restart: "no"
+    depends_on:
+      - fuseki
+    environment:
+      FUSEKI_ADMIN_PASSWORD: ${FUSEKI_ADMIN_PASSWORD:-admin}
+    volumes:
+      - ./ontology:/data:ro
+    entrypoint: ["/bin/sh", "-c"]
+    command:
+      - |
+        for i in $$(seq 1 40); do curl -sf -o /dev/null http://fuseki:3030/ && break; sleep 3; done
+        for f in /data/*.ttl; do
+          echo "Cargando $$f en Fuseki..."
+          curl -sS -u "admin:$$FUSEKI_ADMIN_PASSWORD" -X POST -H "Content-Type: text/turtle" \
+               --data-binary "@$$f" http://fuseki:3030/ds/data
+          echo
+        done
+
+  backend:
+    build: ./backend
+    container_name: devsecops_backend
+    restart: always
+    env_file:
+      - .env
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER:-devuser}:${POSTGRES_PASSWORD:-devpassword123}@postgres_db:5432/${POSTGRES_DB:-devsecops_logs}
+      FUSEKI_URL: http://fuseki:3030/SentinelOps/query
+    ports:
+      - "8000:8000"
+    depends_on:
+      postgres_db:
+        condition: service_healthy
+      fuseki:
+        condition: service_started
+
+  frontend:
+    build: ./frontend
+    container_name: devsecops_frontend
+    restart: always
+    environment:
+      VITE_API_URL: http://localhost:8000/api/v1
+      VITE_TURNSTILE_SITE_KEY: ${TURNSTILE_SITE_KEY:-1x00000000000000000000AA}
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:
+  fuseki_data:

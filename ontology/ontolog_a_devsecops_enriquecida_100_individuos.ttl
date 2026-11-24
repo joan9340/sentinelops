@@ -1,0 +1,984 @@
+@prefix : <http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/> .
+
+<http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4> rdf:type owl:Ontology ;
+                                                                          rdfs:comment """Autor:Joan Sebastian Muñoz Bedoya
+Sebatian Basto Olaya""" .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/alojadoEn
+:alojadoEn rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:domain :ContenedorDocker ;
+           rdfs:range :ServidorWeb .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/contieneVulnerabilidad
+:contieneVulnerabilidad rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf owl:topObjectProperty ;
+                        rdfs:domain :ComponenteInfraestructura ;
+                        rdfs:range :VulnerabilidadSeguridad .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/dependeDe
+:dependeDe rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:domain :ComponenteInfraestructura ;
+           rdfs:range :ComponenteInfraestructura .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/ejecutaEn
+:ejecutaEn rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:domain :API_Microservicio ;
+           rdfs:range :ContenedorDocker .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/impactaA
+:impactaA rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty ;
+          rdfs:domain :Incidente ;
+          rdfs:range :ComponenteInfraestructura .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/presentaFalla
+:presentaFalla rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               rdfs:domain :ComponenteInfraestructura ;
+               rdfs:range :FallaTecnica .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/seResuelveCon
+:seResuelveCon rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               rdfs:domain :Incidente ;
+               rdfs:range :AccionDevSecOps .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/codigoCVE
+:codigoCVE rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf owl:topDataProperty ;
+           rdfs:domain :VulnerabilidadSeguridad ;
+           rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/comandoCLI
+:comandoCLI rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain :AccionDevSecOps ;
+            rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/direccionIP
+:direccionIP rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain :ComponenteInfraestructura ;
+             rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/nivelGravedad
+:nivelGravedad rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty ;
+               rdfs:domain :Incidente ;
+               rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/puerto
+:puerto rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf owl:topDataProperty ;
+        rdfs:domain :ComponenteInfraestructura ;
+        rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/tiempoExpiracion
+:tiempoExpiracion rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf owl:topDataProperty ;
+                  rdfs:domain :UsuarioSeguridad ;
+                  rdfs:range xsd:integer .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/API_Microservicio
+:API_Microservicio rdf:type owl:Class ;
+                   rdfs:subClassOf :ComponenteInfraestructura .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/AccionDevSecOps
+:AccionDevSecOps rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Administrador
+:Administrador rdf:type owl:Class ;
+               rdfs:subClassOf :UsuarioSeguridad .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/BalanceadorCarga
+:BalanceadorCarga rdf:type owl:Class ;
+                  rdfs:subClassOf :ComponenteInfraestructura .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/BaseDatos
+:BaseDatos rdf:type owl:Class ;
+           rdfs:subClassOf :ComponenteInfraestructura .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/ComandoReparacion
+:ComandoReparacion rdf:type owl:Class ;
+                   rdfs:subClassOf :AccionDevSecOps .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/ComponenteInfraestructura
+:ComponenteInfraestructura rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/ContenedorDocker
+:ContenedorDocker rdf:type owl:Class ;
+                  rdfs:subClassOf :ComponenteInfraestructura .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/FallaTecnica
+:FallaTecnica rdf:type owl:Class ;
+              rdfs:subClassOf :Incidente .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Incidente
+:Incidente rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/OperadorTI
+:OperadorTI rdf:type owl:Class ;
+            rdfs:subClassOf :UsuarioSeguridad .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/ParcheSeguridad
+:ParcheSeguridad rdf:type owl:Class ;
+                 rdfs:subClassOf :AccionDevSecOps .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/ScriptDespliegue
+:ScriptDespliegue rdf:type owl:Class ;
+                  rdfs:subClassOf :AccionDevSecOps .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/ServidorWeb
+:ServidorWeb rdf:type owl:Class ;
+             rdfs:subClassOf :ComponenteInfraestructura .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/UsuarioSeguridad
+:UsuarioSeguridad rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/VulnerabilidadSeguridad
+:VulnerabilidadSeguridad rdf:type owl:Class ;
+                         rdfs:subClassOf :Incidente .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/API_Analitica
+:API_Analitica rdf:type owl:NamedIndividual ,
+                        :API_Microservicio ;
+               :dependeDe :BD_Analytics_ClickHouse ;
+               :ejecutaEn :Docker_Analytics_Service ;
+               :puerto 8005 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/API_Auditoria
+:API_Auditoria rdf:type owl:NamedIndividual ,
+                        :API_Microservicio ;
+               :dependeDe :BD_Audit_Elasticsearch ;
+               :ejecutaEn :Docker_Audit_Service ;
+               :puerto 8009 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/API_Autenticacion
+:API_Autenticacion rdf:type owl:NamedIndividual ,
+                            :API_Microservicio ;
+                   :dependeDe :BD_Usuarios_Postgres ;
+                   :ejecutaEn :Docker_Auth_Service ;
+                   :puerto 8000 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/API_Busqueda
+:API_Busqueda rdf:type owl:NamedIndividual ,
+                       :API_Microservicio ;
+              :dependeDe :BD_Audit_Elasticsearch ;
+              :ejecutaEn :Docker_Search_Service ;
+              :puerto 8006 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/API_Catalogo
+:API_Catalogo rdf:type owl:NamedIndividual ,
+                       :API_Microservicio ;
+              :dependeDe :BD_Catalogo_Mongo ;
+              :ejecutaEn :Docker_Catalog_Service ;
+              :puerto 8002 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/API_Envios
+:API_Envios rdf:type owl:NamedIndividual ,
+                     :API_Microservicio ;
+            :dependeDe :BD_Ordenes_Postgres ;
+            :ejecutaEn :Docker_Shipping_Service ;
+            :puerto 8008 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/API_Facturacion
+:API_Facturacion rdf:type owl:NamedIndividual ,
+                          :API_Microservicio ;
+                 :dependeDe :BD_Pagos_MySQL ;
+                 :ejecutaEn :Docker_Payment_Service ;
+                 :presentaFalla :Error_HTTP_502_BadGateway ;
+                 :puerto 8081 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/API_Gateway_Central
+:API_Gateway_Central rdf:type owl:NamedIndividual ,
+                              :API_Microservicio ;
+                     :dependeDe :API_Autenticacion ;
+                     :ejecutaEn :Docker_Gateway_Service ;
+                     :puerto 443 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/API_Inventario
+:API_Inventario rdf:type owl:NamedIndividual ,
+                         :API_Microservicio ;
+                :dependeDe :BD_Catalogo_Mongo ;
+                :ejecutaEn :Docker_Inventory_Service ;
+                :puerto 8007 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/API_Logs_Loki
+:API_Logs_Loki rdf:type owl:NamedIndividual ,
+                        :API_Microservicio ;
+               :ejecutaEn :Docker_Audit_Service ;
+               :puerto 3100 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/API_Métricas_Prometheus
+:API_Métricas_Prometheus rdf:type owl:NamedIndividual ,
+                                  :API_Microservicio ;
+                         :ejecutaEn :Docker_Analytics_Service ;
+                         :puerto 9090 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/API_Notificaciones
+:API_Notificaciones rdf:type owl:NamedIndividual ,
+                             :API_Microservicio ;
+                    :ejecutaEn :Docker_Notification_Service ;
+                    :puerto 8004 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/API_Ordenes
+:API_Ordenes rdf:type owl:NamedIndividual ,
+                      :API_Microservicio ;
+             :dependeDe :BD_Ordenes_Postgres ;
+             :ejecutaEn :Docker_Order_Service ;
+             :puerto 8003 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/API_Pagos
+:API_Pagos rdf:type owl:NamedIndividual ,
+                    :API_Microservicio ;
+           :contieneVulnerabilidad :Vuln_OpenSSL_Heartbleed ;
+           :dependeDe :BD_Pagos_MySQL ;
+           :ejecutaEn :Docker_Payment_Service ;
+           :puerto 8080 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/API_Usuarios
+:API_Usuarios rdf:type owl:NamedIndividual ,
+                       :API_Microservicio ;
+              :dependeDe :BD_Usuarios_Postgres ;
+              :ejecutaEn :Docker_User_Service ;
+              :puerto 8001 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/AWS_ALB_Main
+:AWS_ALB_Main rdf:type owl:NamedIndividual ,
+                       :BalanceadorCarga ;
+              :direccionIP "10.0.0.1" ;
+              :puerto 443 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/BD_Analytics_ClickHouse
+:BD_Analytics_ClickHouse rdf:type owl:NamedIndividual ,
+                                  :BaseDatos ;
+                         :direccionIP "192.168.2.21" ;
+                         :puerto 8123 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/BD_Audit_Elasticsearch
+:BD_Audit_Elasticsearch rdf:type owl:NamedIndividual ,
+                                 :BaseDatos ;
+                        :contieneVulnerabilidad :Vuln_Log4j_Elastic ;
+                        :direccionIP "192.168.1.25" ;
+                        :puerto 9200 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/BD_Catalogo_Mongo
+:BD_Catalogo_Mongo rdf:type owl:NamedIndividual ,
+                            :BaseDatos ;
+                   :contieneVulnerabilidad :Vuln_Mongo_NoAuth ;
+                   :direccionIP "192.168.1.22" ;
+                   :puerto 27017 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/BD_Dev_SQLite
+:BD_Dev_SQLite rdf:type owl:NamedIndividual ,
+                        :BaseDatos ;
+               :direccionIP "192.168.3.20" ;
+               :puerto 0 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/BD_Ordenes_Postgres
+:BD_Ordenes_Postgres rdf:type owl:NamedIndividual ,
+                              :BaseDatos ;
+                     :direccionIP "192.168.1.24" ;
+                     :puerto 5432 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/BD_Pagos_MySQL
+:BD_Pagos_MySQL rdf:type owl:NamedIndividual ,
+                         :BaseDatos ;
+                :direccionIP "192.168.1.21" ;
+                :puerto 3306 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/BD_Redis_Cache
+:BD_Redis_Cache rdf:type owl:NamedIndividual ,
+                         :BaseDatos ;
+                :presentaFalla :Error_Redis_Memory_Full ;
+                :direccionIP "192.168.1.23" ;
+                :puerto 6379 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/BD_Staging_Postgres
+:BD_Staging_Postgres rdf:type owl:NamedIndividual ,
+                              :BaseDatos ;
+                     :direccionIP "192.168.2.20" ;
+                     :puerto 5432 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/BD_Usuarios_Postgres
+:BD_Usuarios_Postgres rdf:type owl:NamedIndividual ,
+                               :BaseDatos ;
+                      :presentaFalla :Error_Conexion_Timeout ;
+                      :direccionIP "192.168.1.20" ;
+                      :puerto 5432 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/BD_Vault_Secrets
+:BD_Vault_Secrets rdf:type owl:NamedIndividual ,
+                           :BaseDatos ;
+                  :direccionIP "10.0.1.20" ;
+                  :puerto 8200 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Docker_Analytics_Service
+:Docker_Analytics_Service rdf:type owl:NamedIndividual ,
+                                   :ContenedorDocker ;
+                          :alojadoEn :Servidor_Staging_01 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Docker_Audit_Service
+:Docker_Audit_Service rdf:type owl:NamedIndividual ,
+                               :ContenedorDocker ;
+                      :alojadoEn :Servidor_Dev_01 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Docker_Auth_Service
+:Docker_Auth_Service rdf:type owl:NamedIndividual ,
+                              :ContenedorDocker ;
+                     :alojadoEn :Servidor_Prod_01 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Docker_Catalog_Service
+:Docker_Catalog_Service rdf:type owl:NamedIndividual ,
+                                 :ContenedorDocker ;
+                        :alojadoEn :Servidor_Prod_02 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Docker_Gateway_Service
+:Docker_Gateway_Service rdf:type owl:NamedIndividual ,
+                                 :ContenedorDocker ;
+                        :alojadoEn :Servidor_DMZ_01 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Docker_Inventory_Service
+:Docker_Inventory_Service rdf:type owl:NamedIndividual ,
+                                   :ContenedorDocker ;
+                          :alojadoEn :Servidor_Staging_02 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Docker_Notification_Service
+:Docker_Notification_Service rdf:type owl:NamedIndividual ,
+                                      :ContenedorDocker ;
+                             :alojadoEn :Servidor_Prod_03 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Docker_Order_Service
+:Docker_Order_Service rdf:type owl:NamedIndividual ,
+                               :ContenedorDocker ;
+                      :alojadoEn :Servidor_Prod_03 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Docker_Payment_Service
+:Docker_Payment_Service rdf:type owl:NamedIndividual ,
+                                 :ContenedorDocker ;
+                        :alojadoEn :Servidor_Prod_01 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Docker_RabbitMQ_Cont
+:Docker_RabbitMQ_Cont rdf:type owl:NamedIndividual ,
+                               :ContenedorDocker ;
+                      :alojadoEn :Servidor_Prod_03 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Docker_Redis_Cache_Cont
+:Docker_Redis_Cache_Cont rdf:type owl:NamedIndividual ,
+                                  :ContenedorDocker ;
+                         :alojadoEn :Servidor_Prod_02 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Docker_Search_Service
+:Docker_Search_Service rdf:type owl:NamedIndividual ,
+                                :ContenedorDocker ;
+                       :alojadoEn :Servidor_Staging_01 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Docker_Shipping_Service
+:Docker_Shipping_Service rdf:type owl:NamedIndividual ,
+                                  :ContenedorDocker ;
+                         :alojadoEn :Servidor_Staging_02 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Docker_User_Service
+:Docker_User_Service rdf:type owl:NamedIndividual ,
+                              :ContenedorDocker ;
+                     :alojadoEn :Servidor_Prod_02 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Docker_WAF_Proxy
+:Docker_WAF_Proxy rdf:type owl:NamedIndividual ,
+                           :ContenedorDocker ;
+                  :alojadoEn :Servidor_DMZ_01 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Error_CPU_Throttling_High
+:Error_CPU_Throttling_High rdf:type owl:NamedIndividual ,
+                                    :FallaTecnica ;
+                           :impactaA :Docker_Order_Service ;
+                           :seResuelveCon :Fix_Scale_Docker_Replicas ;
+                           :nivelGravedad "MEDIO" .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Error_Conexion_Timeout
+:Error_Conexion_Timeout rdf:type owl:NamedIndividual ,
+                                 :FallaTecnica ;
+                        :impactaA :API_Autenticacion ;
+                        :seResuelveCon :Fix_Reiniciar_Postgres ;
+                        :nivelGravedad "CRITICO" .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Error_DNS_Resolution_Failure
+:Error_DNS_Resolution_Failure rdf:type owl:NamedIndividual ,
+                                       :FallaTecnica ;
+                              :impactaA :API_Envios ;
+                              :seResuelveCon :Fix_Flush_DNS_Cache ;
+                              :nivelGravedad "BAJO" .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Error_Disk_Quota_Exceeded
+:Error_Disk_Quota_Exceeded rdf:type owl:NamedIndividual ,
+                                    :FallaTecnica ;
+                           :impactaA :Servidor_Prod_01 ;
+                           :seResuelveCon :Fix_Clean_Docker_Prune ;
+                           :nivelGravedad "CRITICO" .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Error_HTTP_502_BadGateway
+:Error_HTTP_502_BadGateway rdf:type owl:NamedIndividual ,
+                                    :FallaTecnica ;
+                           :impactaA :API_Facturacion ;
+                           :seResuelveCon :Fix_Restart_Nginx ;
+                           :nivelGravedad "ALTO" .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Error_Out_Of_Memory_Killed
+:Error_Out_Of_Memory_Killed rdf:type owl:NamedIndividual ,
+                                     :FallaTecnica ;
+                            :impactaA :Docker_Analytics_Service ;
+                            :seResuelveCon :Fix_Increase_Docker_RAM ;
+                            :nivelGravedad "ALTO" .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Error_Postgres_Deadlock
+:Error_Postgres_Deadlock rdf:type owl:NamedIndividual ,
+                                  :FallaTecnica ;
+                         :impactaA :BD_Ordenes_Postgres ;
+                         :seResuelveCon :Fix_Kill_Idle_Connections ;
+                         :nivelGravedad "ALTO" .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Error_RabbitMQ_Queue_Blocked
+:Error_RabbitMQ_Queue_Blocked rdf:type owl:NamedIndividual ,
+                                       :FallaTecnica ;
+                              :impactaA :API_Notificaciones ;
+                              :seResuelveCon :Fix_Purge_RabbitMQ_Queue ;
+                              :nivelGravedad "MEDIO" .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Error_Redis_Memory_Full
+:Error_Redis_Memory_Full rdf:type owl:NamedIndividual ,
+                                  :FallaTecnica ;
+                         :impactaA :BD_Redis_Cache ;
+                         :seResuelveCon :Fix_Flush_Redis ;
+                         :nivelGravedad "MEDIO" .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Error_SSL_Certificate_Expired
+:Error_SSL_Certificate_Expired rdf:type owl:NamedIndividual ,
+                                        :FallaTecnica ;
+                               :impactaA :Nginx_LB_Frontend ;
+                               :seResuelveCon :Fix_Renew_Certbot ;
+                               :nivelGravedad "CRITICO" .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Fix_Actualizar_OpenSSL
+:Fix_Actualizar_OpenSSL rdf:type owl:NamedIndividual ,
+                                 :ParcheSeguridad ;
+                        :comandoCLI "apk upgrade --no-cache openssl" .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Fix_Clean_Docker_Prune
+:Fix_Clean_Docker_Prune rdf:type owl:NamedIndividual ,
+                                 :ComandoReparacion ;
+                        :comandoCLI "docker system prune -a --volumes -f" .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Fix_Enable_Mongo_Auth
+:Fix_Enable_Mongo_Auth rdf:type owl:NamedIndividual ,
+                                :ParcheSeguridad ;
+                       :comandoCLI "mongod --auth --config /etc/mongod.conf" .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Fix_Enforce_JWT_Alg
+:Fix_Enforce_JWT_Alg rdf:type owl:NamedIndividual ,
+                              :ParcheSeguridad ;
+                     :comandoCLI "sed -i 's/ALG_NONE/ALG_RS256/g' /app/config/jwt.json" .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Fix_Flush_DNS_Cache
+:Fix_Flush_DNS_Cache rdf:type owl:NamedIndividual ,
+                              :ComandoReparacion ;
+                     :comandoCLI "resolvectl flush-caches" .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Fix_Flush_Redis
+:Fix_Flush_Redis rdf:type owl:NamedIndividual ,
+                          :ComandoReparacion ;
+                 :comandoCLI "redis-cli flushall" .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Fix_Increase_Docker_RAM
+:Fix_Increase_Docker_RAM rdf:type owl:NamedIndividual ,
+                                  :ComandoReparacion ;
+                         :comandoCLI "docker update --memory 4g --memory-swap 4g docker_analytics_cont" .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Fix_Kill_Idle_Connections
+:Fix_Kill_Idle_Connections rdf:type owl:NamedIndividual ,
+                                    :ComandoReparacion ;
+                           :comandoCLI "psql -U postgres -c \"SELECT pg_terminate_backend(pid) FROM pg_stat_activity WHERE state = 'idle';\"" .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Fix_Patch_Log4j
+:Fix_Patch_Log4j rdf:type owl:NamedIndividual ,
+                          :ParcheSeguridad ;
+                 :comandoCLI "export LOG4J_FORMAT_MSG_NO_LOOKUPS=true && systemctl restart elasticsearch" .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Fix_Patch_Nginx_HTTP2
+:Fix_Patch_Nginx_HTTP2 rdf:type owl:NamedIndividual ,
+                                :ParcheSeguridad ;
+                       :comandoCLI "apt-get update && apt-get install --only-upgrade nginx -y" .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Fix_Purge_RabbitMQ_Queue
+:Fix_Purge_RabbitMQ_Queue rdf:type owl:NamedIndividual ,
+                                   :ComandoReparacion ;
+                          :comandoCLI "rabbitmqctl purge_queue notifications_queue" .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Fix_Reiniciar_Postgres
+:Fix_Reiniciar_Postgres rdf:type owl:NamedIndividual ,
+                                 :ComandoReparacion ;
+                        :comandoCLI "docker restart postgres_db_container" .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Fix_Renew_Certbot
+:Fix_Renew_Certbot rdf:type owl:NamedIndividual ,
+                            :ComandoReparacion ;
+                   :comandoCLI "certbot renew --force-renewal" .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Fix_Restart_Nginx
+:Fix_Restart_Nginx rdf:type owl:NamedIndividual ,
+                            :ComandoReparacion ;
+                   :comandoCLI "systemctl restart nginx" .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Fix_Sanitize_Gateway_Inputs
+:Fix_Sanitize_Gateway_Inputs rdf:type owl:NamedIndividual ,
+                                      :ParcheSeguridad ;
+                             :comandoCLI "pip install --upgrade bleach html-sanitizer" .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Fix_Scale_Docker_Replicas
+:Fix_Scale_Docker_Replicas rdf:type owl:NamedIndividual ,
+                                    :ComandoReparacion ;
+                           :comandoCLI "docker service scale order_service=3" .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Fix_Update_OpenSSH
+:Fix_Update_OpenSSH rdf:type owl:NamedIndividual ,
+                             :ParcheSeguridad ;
+                    :comandoCLI "apt-get update && apt-get install --only-upgrade openssh-server -y" .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Fix_Update_Postgres_Binary
+:Fix_Update_Postgres_Binary rdf:type owl:NamedIndividual ,
+                                     :ParcheSeguridad ;
+                            :comandoCLI "apt-get update && apt-get install --only-upgrade postgresql-14 -y" .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Fix_Update_RunC
+:Fix_Update_RunC rdf:type owl:NamedIndividual ,
+                          :ParcheSeguridad ;
+                 :comandoCLI "curl -L https://github.com/opencontainers/runc/releases/download/v1.1.12/runc.amd64 -o /usr/bin/runc" .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Fix_Update_Spring_Framework
+:Fix_Update_Spring_Framework rdf:type owl:NamedIndividual ,
+                                      :ParcheSeguridad ;
+                             :comandoCLI "./gradlew build -PspringVersion=5.3.18" .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/HAProxy_Core
+:HAProxy_Core rdf:type owl:NamedIndividual ,
+                       :BalanceadorCarga ;
+              :direccionIP "192.168.1.3" ;
+              :puerto 9000 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Nginx_LB_Backend
+:Nginx_LB_Backend rdf:type owl:NamedIndividual ,
+                           :BalanceadorCarga ;
+                  :direccionIP "192.168.1.2" ;
+                  :puerto 8080 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Nginx_LB_Frontend
+:Nginx_LB_Frontend rdf:type owl:NamedIndividual ,
+                            :BalanceadorCarga ;
+                   :direccionIP "192.168.1.1" ;
+                   :puerto 443 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Script_Backup_Postgres_Daily
+:Script_Backup_Postgres_Daily rdf:type owl:NamedIndividual ,
+                                       :ScriptDespliegue ;
+                              :comandoCLI "pg_dump -U postgres -h 192.168.1.20 db_users > /backups/users_$(date +%F).sql" .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Script_DB_Migration_Run
+:Script_DB_Migration_Run rdf:type owl:NamedIndividual ,
+                                  :ScriptDespliegue ;
+                         :comandoCLI "alembic upgrade head" .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Script_Deploy_Prod_Pipeline
+:Script_Deploy_Prod_Pipeline rdf:type owl:NamedIndividual ,
+                                      :ScriptDespliegue ;
+                             :comandoCLI "./scripts/deploy_prod.sh --env=production --blue-green" .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Script_Deploy_Staging
+:Script_Deploy_Staging rdf:type owl:NamedIndividual ,
+                                :ScriptDespliegue ;
+                       :comandoCLI "./scripts/deploy_staging.sh --branch=develop" .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Script_Rollback_Auth
+:Script_Rollback_Auth rdf:type owl:NamedIndividual ,
+                               :ScriptDespliegue ;
+                      :comandoCLI "helm rollback auth-service-release 1" .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Servidor_Backup_01
+:Servidor_Backup_01 rdf:type owl:NamedIndividual ,
+                             :ServidorWeb ;
+                    :direccionIP "10.0.2.10" .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Servidor_DMZ_01
+:Servidor_DMZ_01 rdf:type owl:NamedIndividual ,
+                          :ServidorWeb ;
+                 :direccionIP "10.0.1.10" .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Servidor_DMZ_02
+:Servidor_DMZ_02 rdf:type owl:NamedIndividual ,
+                          :ServidorWeb ;
+                 :direccionIP "10.0.1.11" .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Servidor_Dev_01
+:Servidor_Dev_01 rdf:type owl:NamedIndividual ,
+                          :ServidorWeb ;
+                 :direccionIP "192.168.3.10" .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Servidor_Dev_02
+:Servidor_Dev_02 rdf:type owl:NamedIndividual ,
+                          :ServidorWeb ;
+                 :direccionIP "192.168.3.11" .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Servidor_Prod_01
+:Servidor_Prod_01 rdf:type owl:NamedIndividual ,
+                           :ServidorWeb ;
+                  :direccionIP "192.168.1.10" .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Servidor_Prod_02
+:Servidor_Prod_02 rdf:type owl:NamedIndividual ,
+                           :ServidorWeb ;
+                  :direccionIP "192.168.1.11" .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Servidor_Prod_03
+:Servidor_Prod_03 rdf:type owl:NamedIndividual ,
+                           :ServidorWeb ;
+                  :direccionIP "192.168.1.12" .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Servidor_Staging_01
+:Servidor_Staging_01 rdf:type owl:NamedIndividual ,
+                              :ServidorWeb ;
+                     :direccionIP "192.168.2.10" .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Servidor_Staging_02
+:Servidor_Staging_02 rdf:type owl:NamedIndividual ,
+                              :ServidorWeb ;
+                     :direccionIP "192.168.2.11" .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Traefik_Ingress_Cluster
+:Traefik_Ingress_Cluster rdf:type owl:NamedIndividual ,
+                                  :BalanceadorCarga ;
+                         :direccionIP "10.0.0.2" ;
+                         :puerto 80 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/User_CI_CD_Bot
+:User_CI_CD_Bot rdf:type owl:NamedIndividual ,
+                         :Administrador ;
+                :tiempoExpiracion 864000 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/User_DBA_Senior
+:User_DBA_Senior rdf:type owl:NamedIndividual ,
+                          :Administrador ;
+                 :tiempoExpiracion 3600 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/User_DevOps_Lead
+:User_DevOps_Lead rdf:type owl:NamedIndividual ,
+                           :Administrador ;
+                  :tiempoExpiracion 7200 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/User_Joan_Munoz
+:User_Joan_Munoz rdf:type owl:NamedIndividual ,
+                          :Administrador ;
+                 :tiempoExpiracion 3600 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/User_Monitoring_Agent
+:User_Monitoring_Agent rdf:type owl:NamedIndividual ,
+                                :OperadorTI ;
+                       :tiempoExpiracion 864000 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/User_Operator_N1_Alpha
+:User_Operator_N1_Alpha rdf:type owl:NamedIndividual ,
+                                 :OperadorTI ;
+                        :tiempoExpiracion 28800 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/User_Operator_N1_Beta
+:User_Operator_N1_Beta rdf:type owl:NamedIndividual ,
+                                :OperadorTI ;
+                       :tiempoExpiracion 28800 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/User_Operator_N2_Delta
+:User_Operator_N2_Delta rdf:type owl:NamedIndividual ,
+                                 :OperadorTI ;
+                        :tiempoExpiracion 14400 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/User_Operator_N2_Gamma
+:User_Operator_N2_Gamma rdf:type owl:NamedIndividual ,
+                                 :OperadorTI ;
+                        :tiempoExpiracion 14400 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/User_PenTester_External
+:User_PenTester_External rdf:type owl:NamedIndividual ,
+                                  :OperadorTI ;
+                         :tiempoExpiracion 7200 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/User_Sebastian_Basto
+:User_Sebastian_Basto rdf:type owl:NamedIndividual ,
+                               :Administrador ;
+                      :tiempoExpiracion 3600 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/User_SecOps_Auditor
+:User_SecOps_Auditor rdf:type owl:NamedIndividual ,
+                              :Administrador ;
+                     :tiempoExpiracion 1800 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/User_Support_Dev_01
+:User_Support_Dev_01 rdf:type owl:NamedIndividual ,
+                              :OperadorTI ;
+                     :tiempoExpiracion 14400 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/User_Support_Dev_02
+:User_Support_Dev_02 rdf:type owl:NamedIndividual ,
+                              :OperadorTI ;
+                     :tiempoExpiracion 14400 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/User_SysAdmin_Root
+:User_SysAdmin_Root rdf:type owl:NamedIndividual ,
+                             :Administrador ;
+                    :tiempoExpiracion 1800 .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Vuln_Docker_Escape_RunC
+:Vuln_Docker_Escape_RunC rdf:type owl:NamedIndividual ,
+                                  :VulnerabilidadSeguridad ;
+                         :impactaA :Docker_Gateway_Service ;
+                         :seResuelveCon :Fix_Update_RunC ;
+                         :codigoCVE "CVE-2019-5736" ;
+                         :nivelGravedad "CRITICO" .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Vuln_JWT_None_Algorithm
+:Vuln_JWT_None_Algorithm rdf:type owl:NamedIndividual ,
+                                  :VulnerabilidadSeguridad ;
+                         :impactaA :API_Autenticacion ;
+                         :seResuelveCon :Fix_Enforce_JWT_Alg ;
+                         :codigoCVE "CVE-2022-21449" ;
+                         :nivelGravedad "CRITICO" .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Vuln_Log4j_Elastic
+:Vuln_Log4j_Elastic rdf:type owl:NamedIndividual ,
+                             :VulnerabilidadSeguridad ;
+                    :impactaA :BD_Audit_Elasticsearch ;
+                    :seResuelveCon :Fix_Patch_Log4j ;
+                    :codigoCVE "CVE-2021-44228" ;
+                    :nivelGravedad "CRITICO" .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Vuln_Mongo_NoAuth
+:Vuln_Mongo_NoAuth rdf:type owl:NamedIndividual ,
+                            :VulnerabilidadSeguridad ;
+                   :impactaA :BD_Catalogo_Mongo ;
+                   :seResuelveCon :Fix_Enable_Mongo_Auth ;
+                   :codigoCVE "CVE-2019-2386" ;
+                   :nivelGravedad "ALTO" .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Vuln_Nginx_HTTP2_Dos
+:Vuln_Nginx_HTTP2_Dos rdf:type owl:NamedIndividual ,
+                               :VulnerabilidadSeguridad ;
+                      :impactaA :Nginx_LB_Frontend ;
+                      :seResuelveCon :Fix_Patch_Nginx_HTTP2 ;
+                      :codigoCVE "CVE-2023-44487" ;
+                      :nivelGravedad "ALTO" .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Vuln_OpenSSL_Heartbleed
+:Vuln_OpenSSL_Heartbleed rdf:type owl:NamedIndividual ,
+                                  :VulnerabilidadSeguridad ;
+                         :impactaA :API_Pagos ;
+                         :seResuelveCon :Fix_Actualizar_OpenSSL ;
+                         :codigoCVE "CVE-2014-0160" ;
+                         :nivelGravedad "CRITICO" .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Vuln_PostgreSQL_SQLi
+:Vuln_PostgreSQL_SQLi rdf:type owl:NamedIndividual ,
+                               :VulnerabilidadSeguridad ;
+                      :impactaA :BD_Usuarios_Postgres ;
+                      :seResuelveCon :Fix_Update_Postgres_Binary ;
+                      :codigoCVE "CVE-2023-2454" ;
+                      :nivelGravedad "ALTO" .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Vuln_Spring4Shell
+:Vuln_Spring4Shell rdf:type owl:NamedIndividual ,
+                            :VulnerabilidadSeguridad ;
+                   :impactaA :API_Usuarios ;
+                   :seResuelveCon :Fix_Update_Spring_Framework ;
+                   :codigoCVE "CVE-2022-22965" ;
+                   :nivelGravedad "CRITICO" .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Vuln_Ssh_Privilege_Escalation
+:Vuln_Ssh_Privilege_Escalation rdf:type owl:NamedIndividual ,
+                                        :VulnerabilidadSeguridad ;
+                               :impactaA :Servidor_Prod_02 ;
+                               :seResuelveCon :Fix_Update_OpenSSH ;
+                               :codigoCVE "CVE-2023-38408" ;
+                               :nivelGravedad "ALTO" .
+
+
+###  http://www.semanticweb.org/munoz/ontologies/2026/8/untitled-ontology-4/Vuln_XSS_Reflected_Gateway
+:Vuln_XSS_Reflected_Gateway rdf:type owl:NamedIndividual ,
+                                     :VulnerabilidadSeguridad ;
+                            :impactaA :API_Gateway_Central ;
+                            :seResuelveCon :Fix_Sanitize_Gateway_Inputs ;
+                            :codigoCVE "CVE-2024-1002" ;
+                            :nivelGravedad "MEDIO" .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

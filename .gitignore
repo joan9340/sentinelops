@@ -1,0 +1,12 @@
+# Secretos
+.env
+*.pem
+!backend/legacy/public_key.pem
+
+# Dependencias y compilados
+node_modules/
+dist/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.db

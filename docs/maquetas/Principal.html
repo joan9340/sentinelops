@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "outline": "#87929a", "secondary": "#4edea3", "surface": "#0f131c", "on-error": "#690005", "on-secondary-container": "#00311f", "on-tertiary-fixed": "#23005c", "secondary-fixed": "#6ffbbe", "tertiary-fixed-dim": "#d0bcff", "tertiary-container": "#bda2ff", "surface-bright": "#353943", "surface-container-highest": "#31353f", "on-secondary-fixed": "#002113", "background": "#0f131c", "error-container": "#93000a", "inverse-surface": "#dfe2ef", "on-primary": "#00354a", "tertiary-fixed": "#e9ddff", "on-tertiary-fixed-variant": "#5516be", "primary": "#8ed5ff", "on-error-container": "#ffdad6", "on-primary-fixed": "#001e2c", "on-tertiary": "#3c0091", "on-secondary": "#003824", "surface-container": "#1c1f29", "surface-dim": "#0f131c", "surface-container-high": "#262a34", "surface-tint": "#7bd0ff", "primary-fixed-dim": "#7bd0ff", "on-secondary-fixed-variant": "#005236", "primary-fixed": "#c4e7ff", "secondary-container": "#00a572", "error": "#ffb4ab", "on-primary-fixed-variant": "#004c69", "on-background": "#dfe2ef", "on-primary-container": "#004965", "surface-container-lowest": "#0a0e17", "secondary-fixed-dim": "#4edea3", "primary-container": "#38bdf8", "on-tertiary-container": "#520fbb", "on-surface": "#dfe2ef", "tertiary": "#d5c3ff", "inverse-on-surface": "#2c303a", "outline-variant": "#3e484f", "inverse-primary": "#00668a", "surface-container-low": "#181b25", "surface-variant": "#31353f", "on-surface-variant": "#bdc8d1" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-xl": "1.75rem", "space-md": "0.75rem", "margin-lg": "2rem", "space-xs": "0.25rem", "margin": "1rem", "gutter": "1rem", "margin-md": "1.5rem", "space-sm": "0.5rem", "space-lg": "1.25rem", "gutter-lg": "1.5rem" }, "fontFamily": { "label-code-md": [ "JetBrains Mono" ], "body-sm": [ "Geist" ], "label-code-sm": [ "JetBrains Mono" ], "body-md": [ "Geist" ], "headline-xl-mobile": [ "Geist" ], "body-lg": [ "Geist" ], "headline-lg": [ "Geist" ], "headline-xl": [ "Geist" ], "label-caps": [ "JetBrains Mono" ], "headline-md": [ "Geist" ] }, "fontSize": { "label-code-md": [ "13px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "500" } ], "body-sm": [ "12px", { "lineHeight": "16px", "fontWeight": "400" } ], "label-code-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "500" } ], "body-md": [ "13px", { "lineHeight": "18px", "fontWeight": "400" } ], "headline-xl-mobile": [ "26px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "body-lg": [ "15px", { "lineHeight": "22px", "letterSpacing": "-0.005em", "fontWeight": "400" } ], "headline-lg": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "headline-xl": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "label-caps": [ "10px", { "lineHeight": "12px", "letterSpacing": "0.08em", "fontWeight": "600" } ], "headline-md": [ "18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-background text-on-surface font-body-md text-body-md min-h-screen"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="flex flex-col"><div class="h-14 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-7 h-7 rounded bg-surface-container-high flex items-center justify-center"><span class="material-symbols-outlined text-primary text-[18px]">shield_with_heart</span></div><div class="flex flex-col"><span class="font-headline-md text-body-md font-semibold tracking-tight text-on-surface">SENTINEL</span><span class="font-label-caps text-label-caps text-primary uppercase">Autonomous SecOps</span></div></div><div class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_8px_rgba(78,222,163,0.5)]"></div></div><div class="px-gutter py-space-sm"><div class="bg-surface-container-low px-space-md py-space-xs rounded flex items-center justify-between"><span class="font-label-code-sm text-label-code-sm text-on-surface-variant uppercase tracking-wider">CLUSTER POSTURE</span><span class="font-label-code-sm text-label-code-sm text-secondary font-medium">99.94%</span></div></div><nav class="flex flex-col gap-space-xs px-space-sm py-space-sm" data-active-classes="bg-surface-container-high text-primary font-medium"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="incident-diagnostic-overview" href="#"><span class="material-symbols-outlined text-[18px]">insights</span><span>Diagnostic Feed</span></a><a aria-current="page" class="flex items-center gap-space-md px-space-md py-space-sm rounded transition-colors bg-surface-container-high text-primary font-medium" data-path="ai-triage-workbench" href="#"><span class="material-symbols-outlined text-[18px]">smart_toy</span><span>AI Triage Agent</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="cluster-telemetry-nodes" href="#"><span class="material-symbols-outlined text-[18px]">hub</span><span>Node Telemetry</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="vulnerability-intelligence" href="#"><span class="material-symbols-outlined text-[18px]">drive_file_rename_outline</span><span>CVE &amp; Exploits</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="policy-compliance-guard" href="#"><span class="material-symbols-outlined text-[18px]">verified_user</span><span>Security Policies</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="immutable-audit-logs" href="#"><span class="material-symbols-outlined text-[18px]">history_toggle_off</span><span>Audit Traces</span></a></nav></div><div class="p-gutter flex flex-col gap-space-sm bg-surface-container-lowest"><div class="p-space-sm bg-surface-container rounded flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-caps text-label-caps text-on-surface-variant">ACTIVE ENGINE</span><span class="font-label-code-sm text-label-code-sm text-secondary">ONLINE</span></div><div class="font-label-code-sm text-label-code-sm text-on-surface">Obsidian Kernel v4.19</div></div><a class="flex items-center gap-space-md px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="diagnostic-settings" href="#"><span class="material-symbols-outlined text-[18px]">settings</span><span>System Config</span></a></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-14 bg-surface/90 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.3)]"><div class="h-14 w-full px-gutter-lg flex items-center justify-between gap-gutter"><div class="flex items-center gap-gutter"><div class="flex items-center gap-space-sm bg-surface-container-lowest px-space-md py-space-xs rounded"><span class="material-symbols-outlined text-secondary text-[16px]">wifi_tethering</span><span class="font-label-code-sm text-label-code-sm text-on-surface">148 / 148 NODES SYNCED</span></div><div class="hidden xl:flex items-center gap-space-sm bg-surface-container-lowest px-space-md py-space-xs rounded"><span class="material-symbols-outlined text-primary text-[16px]">memory</span><span class="font-label-code-sm text-label-code-sm text-on-surface-variant">CPU LATENCY</span><span class="font-label-code-sm text-label-code-sm text-on-surface font-semibold">4.2ms</span></div><div class="hidden 2xl:flex items-center gap-space-sm bg-surface-container-lowest px-space-md py-space-xs rounded"><span class="material-symbols-outlined text-secondary text-[16px]">security</span><span class="font-label-code-sm text-label-code-sm text-on-surface-variant">INGRESS THREATS</span><span class="font-label-code-sm text-label-code-sm text-secondary font-semibold">0 DETECTED</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs bg-surface-container px-space-md py-space-xs rounded text-on-surface-variant"><span class="material-symbols-outlined text-[16px]">terminal</span><span class="font-label-code-sm text-label-code-sm">PROD-US-EAST-01</span></div><button class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[18px]">notifications</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-14 bg-background min-h-screen"><div class="flex flex-col w-full h-[calc(100vh-3.5rem)] overflow-hidden">
+<div class="flex flex-1 w-full h-full overflow-hidden">
+<!-- LEFT SUB-SIDEBAR: Diagnostic Sessions & Real-time Telemetry -->
+<div class="w-80 flex-shrink-0 bg-surface-container-lowest flex flex-col justify-between">
+<!-- Top Section: Header & Session List -->
+<div class="flex flex-col flex-1 min-h-0">
+<!-- Sub-header -->
+<div class="p-space-md flex flex-col gap-space-sm bg-surface-container-low/40">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">terminal</span>
+<span class="font-headline-md text-body-md font-semibold text-on-surface tracking-tight">Diagnostic Sessions</span>
+</div>
+<button class="flex items-center justify-center w-7 h-7 rounded bg-primary text-on-primary hover:bg-primary-fixed-dim transition-all shadow-sm">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+<!-- Quick Session Search & Filters -->
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-2.5 top-2 text-[14px] text-outline">search</span>
+<input class="w-full bg-surface-container-lowest pl-8 pr-3 py-1.5 rounded text-on-surface font-label-code-sm text-label-code-sm placeholder:text-outline outline-none focus:bg-surface-container transition-all" placeholder="Filter incidents, clusters, CVEs..." type="text"/>
+</div>
+</div>
+<!-- Sessions List -->
+<div class="flex-1 overflow-y-auto px-space-xs py-space-sm flex flex-col gap-1">
+<div class="px-space-md py-1">
+<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">Active Workspace</span>
+</div>
+<!-- Active Item: INC-8942 -->
+<div class="p-space-md rounded bg-surface-container flex flex-col gap-1.5 cursor-pointer relative shadow-sm">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary rounded-l"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="font-label-code-sm text-label-code-sm font-semibold text-primary">INC-8942</span>
+<span class="px-1.5 py-0.5 rounded bg-error-container text-error font-label-caps text-label-caps">CRITICAL</span>
+</div>
+<span class="font-label-code-sm text-label-code-sm text-outline">Just now</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface font-medium truncate">Ingress Envoy TLS Memory Spike</p>
+<div class="flex items-center justify-between text-outline">
+<span class="font-label-code-sm text-label-code-sm text-secondary flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> 3 recommendations
+              </span>
+<span class="font-label-code-sm text-label-code-sm text-on-surface-variant">us-east-04</span>
+</div>
+</div>
+<div class="px-space-md pt-space-sm pb-1">
+<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">Past 24 Hours</span>
+</div>
+<!-- Session 2 -->
+<div class="p-space-md rounded hover:bg-surface-container-low transition-colors flex flex-col gap-1 cursor-pointer">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="font-label-code-sm text-label-code-sm text-on-surface">INC-8931</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-secondary font-label-caps text-label-caps">RESOLVED</span>
+</div>
+<span class="font-label-code-sm text-label-code-sm text-outline">2h ago</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant truncate">Vault Token Rotation Latency</p>
+<span class="font-label-code-sm text-label-code-sm text-outline">Prod-EU-Central • 18 pods</span>
+</div>
+<!-- Session 3 -->
+<div class="p-space-md rounded hover:bg-surface-container-low transition-colors flex flex-col gap-1 cursor-pointer">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="font-label-code-sm text-label-code-sm text-on-surface">INC-8919</span>
+<span class="px-1.5 py-0.5 rounded bg-tertiary-container/20 text-tertiary font-label-caps text-label-caps">PATCHED</span>
+</div>
+<span class="font-label-code-sm text-label-code-sm text-outline">5h ago</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant truncate">CI/CD Secret Exposure in Pod Spec</p>
+<span class="font-label-code-sm text-label-code-sm text-outline">GitHub Actions • Runner 11</span>
+</div>
+<!-- Session 4 -->
+<div class="p-space-md rounded hover:bg-surface-container-low transition-colors flex flex-col gap-1 cursor-pointer">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="font-label-code-sm text-label-code-sm text-on-surface">INC-8890</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-outline font-label-caps text-label-caps">RESOLVED</span>
+</div>
+<span class="font-label-code-sm text-label-code-sm text-outline">Yesterday</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant truncate">ArgoCD Sync Lockout on Prod-East</p>
+<span class="font-label-code-sm text-label-code-sm text-outline">GitOps Controller • Auto-cleared</span>
+</div>
+<!-- Session 5 -->
+<div class="p-space-md rounded hover:bg-surface-container-low transition-colors flex flex-col gap-1 cursor-pointer">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="font-label-code-sm text-label-code-sm text-on-surface">INC-8874</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-outline font-label-caps text-label-caps">RESOLVED</span>
+</div>
+<span class="font-label-code-sm text-label-code-sm text-outline">2d ago</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant truncate">eBPF Kernel Probe Packet Drop</p>
+<span class="font-label-code-sm text-label-code-sm text-outline">DaemonSet cilium-agent</span>
+</div>
+</div>
+</div>
+<!-- Bottom Section: Telemetry & Cluster Status Widget -->
+<div class="p-space-md bg-surface-container-low m-space-xs rounded flex flex-col gap-space-xs shadow-inner">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_8px_rgba(78,222,163,0.8)]"></span>
+<span class="font-label-code-sm text-label-code-sm font-semibold text-on-surface">SecOps Agent v4.8</span>
+</div>
+<span class="font-label-caps text-label-caps text-secondary font-medium tracking-wide">STREAMING</span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs mt-1">
+<div class="p-space-xs bg-surface-container-lowest rounded flex flex-col">
+<span class="font-label-caps text-label-caps text-outline">HEALTH SCORE</span>
+<span class="font-label-code-sm text-label-code-sm text-secondary font-medium mt-0.5">99.4% Normal</span>
+</div>
+<div class="p-space-xs bg-surface-container-lowest rounded flex flex-col">
+<span class="font-label-caps text-label-caps text-outline">LATENCY (p99)</span>
+<span class="font-label-code-sm text-label-code-sm text-primary font-medium mt-0.5">18ms</span>
+</div>
+<div class="p-space-xs bg-surface-container-lowest rounded flex flex-col col-span-2">
+<div class="flex justify-between items-center">
+<span class="font-label-caps text-label-caps text-outline">ACTIVE CLUSTER NODES</span>
+<span class="font-label-code-sm text-label-code-sm text-on-surface">48 / 48</span>
+</div>
+<!-- Mini visual node bars -->
+<div class="w-full h-1.5 bg-surface-container rounded overflow-hidden flex gap-0.5 mt-1.5">
+<div class="h-full bg-secondary flex-1"></div>
+<div class="h-full bg-secondary flex-1"></div>
+<div class="h-full bg-secondary flex-1"></div>
+<div class="h-full bg-secondary flex-1"></div>
+<div class="h-full bg-error flex-1"></div>
+<div class="h-full bg-secondary flex-1"></div>
+<div class="h-full bg-secondary flex-1"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- MAIN CHAT & DIAGNOSTIC INTERFACE -->
+<div class="flex-1 flex flex-col min-w-0 bg-background overflow-hidden relative">
+<!-- Incident Header Bar -->
+<div class="px-gutter-lg py-space-sm bg-surface-container-low/70 backdrop-blur flex items-center justify-between gap-space-md z-10 shadow-sm">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-8 h-8 rounded bg-primary/10 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary text-[20px]">troubleshoot</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-headline-md text-on-surface truncate">INC-8942 // Ingress Envoy TLS Memory Exhaustion</span>
+<span class="px-2 py-0.5 rounded bg-secondary/10 text-secondary font-label-code-sm text-label-code-sm font-medium flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Root Cause Identified
+              </span>
+</div>
+<div class="flex items-center gap-space-md text-outline font-label-code-sm text-label-code-sm">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">cloud</span> Target: us-east-prod-cluster-04</span>
+<span>•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">dns</span> Namespace: ingress-nginx</span>
+<span>•</span>
+<span class="text-error font-medium">OOMKiller Status: ExitCode 137</span>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-space-xs flex-shrink-0">
+<button class="px-space-md py-1.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-body-md text-body-md transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">ios_share</span>
+<span>Share Session</span>
+</button>
+<button class="px-space-md py-1.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-body-md text-body-md transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">description</span>
+<span>Export RCA</span>
+</button>
+<button class="px-space-md py-1.5 rounded bg-primary text-on-primary hover:bg-primary-fixed-dim font-body-md text-body-md font-semibold transition-all flex items-center gap-1.5 shadow-md">
+<span class="material-symbols-outlined text-[16px]">auto_fix_high</span>
+<span>Auto-Remediate</span>
+</button>
+</div>
+</div>
+<!-- Conversational Chat Stream -->
+<div class="flex-1 overflow-y-auto px-gutter-lg py-space-lg flex flex-col gap-space-lg">
+<!-- User Query -->
+<div class="flex items-start gap-space-md max-w-4xl self-end flex-row-reverse">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center flex-shrink-0 text-on-surface">
+<span class="material-symbols-outlined text-[18px]">account_circle</span>
+</div>
+<div class="flex flex-col items-end gap-1.5">
+<div class="flex items-center gap-2">
+<span class="font-label-code-sm text-label-code-sm text-outline">alex.chen (Principal SecOps)</span>
+<span class="font-label-code-sm text-label-code-sm text-outline">14:28:11 UTC</span>
+</div>
+<div class="p-space-md rounded-xl rounded-tr-none bg-surface-container-high text-on-surface shadow-sm">
+<p class="font-body-lg text-body-lg leading-relaxed">
+                Analyze the sudden pod restarts on our <code class="px-1.5 py-0.5 rounded bg-surface-container-lowest font-label-code-sm text-primary">ingress-nginx-controller</code> namespace in cluster <code class="px-1.5 py-0.5 rounded bg-surface-container-lowest font-label-code-sm text-primary">us-east-04</code>. Correlate kernel dmesg OOM kills with TLS session resumption spikes over the last 45 minutes.
+              </p>
+</div>
+<div class="flex items-center gap-1.5 bg-surface-container-lowest px-2.5 py-1 rounded text-outline font-label-code-sm text-label-code-sm">
+<span class="material-symbols-outlined text-[14px] text-primary">attachment</span>
+<span>Attached: prometheus-metrics.json, envoy-access.log, audit.log (3.4 MB)</span>
+</div>
+</div>
+</div>
+<!-- Sentinel AI Assistant Response -->
+<div class="flex items-start gap-space-md max-w-5xl">
+<div class="w-8 h-8 rounded bg-primary flex items-center justify-center flex-shrink-0 shadow-[0_0_12px_rgba(56,189,248,0.4)]">
+<span class="material-symbols-outlined text-on-primary text-[20px]">smart_toy</span>
+</div>
+<div class="flex flex-col gap-space-md flex-1 min-w-0">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-code-sm text-label-code-sm font-semibold text-primary">Sentinel AI Triage Engine</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-outline font-label-code-sm text-label-code-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-secondary">verified</span>
+                Sentinel-SecGPT v4.8 (Enterprise Zero-Trust)
+              </span>
+<span class="font-label-code-sm text-label-code-sm text-outline">Processed 14,200 events in 320ms</span>
+</div>
+<!-- Descriptive response text -->
+<p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
+              I have correlated the telemetry across 14,200 Envoy ingress logs, Prometheus memory heap profiles, and eBPF network tracepoints. The memory exhaustion leading to SIGKILL (OOM 137) is caused by unbounded TLS session resumption buffers under high parallel renegotiation attacks originating from untrusted upstream edge nodes.
+            </p>
+<!-- Prominent Structured Diagnostic Card -->
+<div class="rounded-xl bg-surface-container p-space-lg flex flex-col gap-space-md shadow-xl relative overflow-hidden">
+<div class="absolute -right-20 -top-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Card Header Row -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">verified_user</span>
+<span class="font-headline-md text-headline-md text-on-surface font-semibold tracking-tight">AI Incident Diagnostic &amp; RCA</span>
+</div>
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2.5 py-1 rounded bg-tertiary-container/25 text-tertiary font-label-code-sm text-label-code-sm font-medium">
+                    k8s-ingress-controller / envoy-proxy-v1.27.4
+                  </span>
+<span class="px-2.5 py-1 rounded bg-error-container/60 text-error font-label-code-sm text-label-code-sm font-medium flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-pulse"></span>
+                    CRITICAL // TLS Handshake Buffer Exhaustion
+                  </span>
+<span class="px-2.5 py-1 rounded bg-secondary/15 text-secondary font-label-code-sm text-label-code-sm font-semibold flex items-center gap-1 shadow-[0_0_12px_rgba(78,222,163,0.25)]">
+<span class="material-symbols-outlined text-[14px]">shield</span>
+                    100% Semantic Confidence
+                  </span>
+</div>
+</div>
+<!-- Impact Summary Bar -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm p-space-md bg-surface-container-lowest rounded-lg">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-error text-[18px]">restart_alt</span>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-outline">CONTAINER RESTARTS</span>
+<span class="font-label-code-sm text-label-code-sm text-on-surface font-semibold">3 pods in past 42 min</span>
+</div>
+</div>
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-error text-[18px]">signal_disconnected</span>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-outline">INGRESS PACKET LOSS</span>
+<span class="font-label-code-sm text-label-code-sm text-on-surface font-semibold">2.4% drop rate (p95 spiked)</span>
+</div>
+</div>
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-[18px]">warning</span>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-outline">SLA RISK ASSESSMENT</span>
+<span class="font-label-code-sm text-label-code-sm text-error font-semibold">High Degradation Threat</span>
+</div>
+</div>
+</div>
+<!-- RCA Bullet Points -->
+<div class="flex flex-col gap-2">
+<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">Diagnostic Analysis Breakdown</span>
+<ul class="flex flex-col gap-1.5 text-on-surface font-body-md text-body-md">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[16px] mt-0.5">crisis_alert</span>
+<span><strong>Unconstrained Memory Allocation:</strong> The ingress controller lacked explicit memory caps on Envoy's TLS ticket encryption cache, causing heap growth up to the 4Gi limit under a sudden renegotiation wave.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[16px] mt-0.5">sync_problem</span>
+<span><strong>TLS Renegotiation Flood:</strong> Over 1,840 renegotiations/sec recorded across 8 remote IP CIDRs, triggering cryptographic CPU stalls and session retention.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px] mt-0.5">check_circle</span>
+<span><strong>Deterministic Resolution:</strong> Clamp buffer limits to 512Mi, enforce a 10s handshake timeout, and rate-limit aggressive renegotiations via Sentinel daemonset patch.</span>
+</li>
+</ul>
+</div>
+<!-- Terminal CLI Snippet Box -->
+<div class="rounded-lg bg-surface-container-lowest overflow-hidden flex flex-col shadow-inner">
+<!-- Terminal Title Bar -->
+<div class="px-space-md py-2 bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="flex items-center gap-1.5">
+<div class="w-2.5 h-2.5 rounded-full bg-error"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-tertiary"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-secondary"></div>
+</div>
+<span class="font-label-code-sm text-label-code-sm text-outline ml-2">zsh (kubectl / sentinel-ctl)</span>
+</div>
+<button class="flex items-center gap-1.5 px-2 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-code-sm text-label-code-sm transition-all" id="copy-btn" onclick="navigator.clipboard.writeText(document.getElementById('code-content').innerText); this.innerHTML = '&lt;span class=\'material-symbols-outlined text-[14px] text-secondary\'&gt;check&lt;/span&gt; Copied!'; setTimeout(() =&gt; { this.innerHTML = '&lt;span class=\'material-symbols-outlined text-[14px]\'&gt;content_copy&lt;/span&gt; Copy Command'; }, 2000);">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+<span>Copy Command</span>
+</button>
+</div>
+<!-- Code Area -->
+<div class="p-space-md overflow-x-auto font-label-code-sm text-label-code-sm leading-relaxed text-on-surface">
+<pre id="code-content"><span class="text-primary font-semibold">sentinel-ctl</span> patch daemonset/ingress-envoy-controller -n ingress-nginx \
+  <span class="text-tertiary">--set</span> envoy.tls.max_session_memory=<span class="text-secondary">"512Mi"</span> \
+  <span class="text-tertiary">--set</span> envoy.tls.handshake_timeout=<span class="text-secondary">"10s"</span> \
+  <span class="text-tertiary">--set</span> security.rate_limit.tls_renegotiation=<span class="text-secondary">50/s</span> \
+  <span class="text-outline">--dry-run=client</span> &amp;&amp; <span class="text-primary font-semibold">kubectl</span> rollout restart ds/ingress-envoy-controller -n ingress-nginx</pre>
+</div>
+</div>
+<!-- Action Triggers -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-xs">
+<div class="flex flex-wrap items-center gap-space-xs">
+<button class="px-space-md py-2 rounded bg-primary text-on-primary font-body-md text-body-md font-semibold hover:bg-primary-fixed-dim transition-all flex items-center gap-1.5 shadow-md">
+<span class="material-symbols-outlined text-[16px]">play_circle</span>
+<span>Execute via Sentinel Runner</span>
+</button>
+<button class="px-space-md py-2 rounded bg-surface-container-high hover:bg-surface-bright text-on-surface font-body-md text-body-md transition-all flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">science</span>
+<span>Validate in Sandbox</span>
+</button>
+<button class="px-space-md py-2 rounded bg-surface-container-high hover:bg-surface-bright text-on-surface font-body-md text-body-md transition-all flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">confirmation_number</span>
+<span>Create Jira Incident Ticket</span>
+</button>
+</div>
+<div class="flex items-center gap-2 text-outline font-label-code-sm text-label-code-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified</span>
+<span>Cluster Guard Policy Verified</span>
+</div>
+</div>
+</div>
+<!-- Follow-up suggestion chips -->
+<div class="flex items-center gap-2 pt-1 flex-wrap">
+<span class="font-label-caps text-label-caps text-outline uppercase">Suggested follow-ups:</span>
+<button class="px-2.5 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-code-sm text-label-code-sm transition-colors">
+                "Show Prometheus memory heap graphs"
+              </button>
+<button class="px-2.5 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-code-sm text-label-code-sm transition-colors">
+                "Identify top 8 renegotiating IPs"
+              </button>
+<button class="px-2.5 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-code-sm text-label-code-sm transition-colors">
+                "Generate rollback YAML"
+              </button>
+</div>
+</div>
+</div>
+</div>
+<!-- BOTTOM CONVERSATIONAL INPUT BAR -->
+<div class="p-gutter-lg bg-surface-container-lowest/90 backdrop-blur z-20 flex flex-col gap-space-xs">
+<!-- Input Container Box -->
+<div class="p-space-sm bg-surface-container rounded-xl flex flex-col gap-space-xs shadow-lg focus-within:ring-1 focus-within:ring-primary transition-all">
+<textarea class="w-full bg-transparent p-space-xs text-on-surface font-body-lg text-body-lg placeholder:text-outline outline-none resize-none" placeholder="Ask follow-up questions, request canary verification, or run diagnostic sandbox..." rows="2"></textarea>
+<div class="flex items-center justify-between pt-1">
+<!-- Left Tooling Buttons -->
+<div class="flex items-center gap-1.5">
+<button class="w-8 h-8 rounded hover:bg-surface-container-high text-outline hover:text-on-surface flex items-center justify-center transition-colors" title="Attach Log File">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+</button>
+<button class="w-8 h-8 rounded hover:bg-surface-container-high text-outline hover:text-on-surface flex items-center justify-center transition-colors" title="Insert Snippet">
+<span class="material-symbols-outlined text-[18px]">code</span>
+</button>
+<div class="h-4 w-px bg-surface-container-highest mx-1"></div>
+<!-- Quick Preset Badges -->
+<div class="hidden md:flex items-center gap-1.5">
+<button class="px-2.5 py-1 rounded bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-code-sm text-label-code-sm transition-colors">
+                  Explain RCA
+                </button>
+<button class="px-2.5 py-1 rounded bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-code-sm text-label-code-sm transition-colors">
+                  Draft Incident Report
+                </button>
+<button class="px-2.5 py-1 rounded bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-code-sm text-label-code-sm transition-colors">
+                  Generate Terraform Fix
+                </button>
+</div>
+</div>
+<!-- Right Controls: Model indicator & Send Button -->
+<div class="flex items-center gap-space-sm">
+<div class="hidden sm:flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container-lowest text-outline font-label-code-sm text-label-code-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="text-on-surface">Sentinel-SecGPT 4.8</span>
+</div>
+<button class="px-space-md py-1.5 rounded bg-primary text-on-primary hover:bg-primary-fixed-dim font-body-md text-body-md font-semibold flex items-center gap-1.5 shadow-[0_0_12px_rgba(56,189,248,0.3)] transition-all">
+<span>Send</span>
+<span class="material-symbols-outlined text-[16px]">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between text-outline px-1">
+<span class="font-label-code-sm text-label-code-sm">Proactive Guard Engine active. Automated interventions require manual operator approval.</span>
+<span class="font-label-code-sm text-label-code-sm">Press ⌘ + Enter to send</span>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>
