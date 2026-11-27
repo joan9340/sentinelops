@@ -1,0 +1,110 @@
+================================================================================
+BATERIA COMPLETA DE PREGUNTAS DE PRUEBA - SENTINELOPS (1,000 INDIVIDUOS)
+================================================================================
+
+--------------------------------------------------------------------------------
+1. MICROSERVICIOS (API_Microservicio): DEPENDENCIAS, CONTENEDORES Y PUERTOS
+--------------------------------------------------------------------------------
+- ¿De qué base de datos depende API_Autenticacion, en qué contenedor se ejecuta y en qué puerto escucha?
+- ¿Qué microservicios dependen de BD_Usuarios_Postgres?
+- ¿Qué microservicios dependen de BD_Pagos_MySQL y cuál es su puerto?
+- ¿Qué microservicios dependen de BD_Catalogo_Mongo?
+- ¿Qué microservicios dependen de BD_Ordenes_Postgres?
+- ¿Qué microservicios dependen de BD_Audit_Elasticsearch?
+- ¿De qué base de datos depende API_Analitica y en qué contenedor corre?
+- ¿En qué contenedor Docker se ejecuta API_Gateway_Central y en qué puerto opera?
+- ¿En qué contenedor se ejecuta API_Facturacion y qué falla presenta?
+- ¿Qué vulnerabilidad contiene API_Pagos y de qué base de datos depende?
+- ¿Qué microservicios corren en Docker_Audit_Service?
+- ¿Qué microservicios corren en Docker_Analytics_Service?
+- ¿Qué puerto usa API_Logs_Loki, API_Métricas_Prometheus, API_Notificaciones, API_Busqueda, API_Inventario o API_Envios?
+- ¿De qué base de datos depende API_Auth_Service_001 y en qué contenedor se ejecuta?
+- ¿En qué contenedor y puerto corre API_Billing_Service_002 o API_Orders_Service_003?
+- ¿Qué microservicios con el patrón API_<Dominio>_Service_<NNN> dependen de BD_Postgres_Shard_001 o BD_MySQL_Shard_002?
+- ¿Qué puertos tienen los servicios API_Catalog_Service_004 hasta API_Queue_Service_015?
+- ¿Qué microservicios comparten el contenedor Docker_Auth_Worker_001 o Docker_Billing_Worker_002?
+
+--------------------------------------------------------------------------------
+2. CONTENEDORES DOCKER (ContenedorDocker) Y SERVIDORES WEB (ServidorWeb)
+--------------------------------------------------------------------------------
+- ¿En qué servidor web está alojado Docker_Auth_Service?
+- ¿En qué servidor web está alojado Docker_Payment_Service o Docker_Order_Service?
+- ¿En qué servidor web están alojados Docker_Gateway_Service y Docker_WAF_Proxy?
+- ¿Qué contenedores Docker están alojados en Servidor_Prod_01, Servidor_Prod_02 o Servidor_Prod_03?
+- ¿Qué contenedores están alojados en Servidor_Staging_01, Servidor_Staging_02, Servidor_Dev_01 o Servidor_DMZ_01?
+- ¿Qué fallas o vulnerabilidades impactan a Servidor_Prod_01, Servidor_Prod_02 o Docker_Gateway_Service?
+- ¿En qué servidor está alojado Docker_Auth_Worker_001 o Docker_Orders_Worker_003?
+- ¿Qué contenedores Docker_<Dominio>_Worker_<NNN> están alojados en Servidor_Prod_Nodo_001 o Servidor_Staging_Nodo_002?
+- ¿Qué dirección IP tiene Servidor_Prod_01, Servidor_DMZ_01, Servidor_Backup_01 o Servidor_Prod_Nodo_001?
+- ¿Qué servidores web pertenecen a la ontología y cuáles son sus direcciones IP?
+
+--------------------------------------------------------------------------------
+3. BASES DE DATOS (BaseDatos) Y BALANCEADORES DE CARGA (BalanceadorCarga)
+--------------------------------------------------------------------------------
+- ¿Cuál es la dirección IP y el puerto de BD_Usuarios_Postgres?
+- ¿Cuál es la dirección IP y el puerto de BD_Pagos_MySQL, BD_Catalogo_Mongo y BD_Ordenes_Postgres?
+- ¿Qué falla presenta BD_Redis_Cache y en qué IP y puerto está?
+- ¿Qué falla presenta BD_Usuarios_Postgres?
+- ¿Qué vulnerabilidad contiene BD_Audit_Elasticsearch o BD_Catalogo_Mongo?
+- ¿Cuál es la dirección IP y el puerto de BD_Analytics_ClickHouse, BD_Staging_Postgres, BD_Dev_SQLite o BD_Vault_Secrets?
+- ¿Cuál es la dirección IP y el puerto de Nginx_LB_Frontend, Nginx_LB_Backend, HAProxy_Core, AWS_ALB_Main o Traefik_Ingress_Cluster?
+- ¿Cuál es la IP y el puerto de BD_Postgres_Shard_001, BD_MySQL_Shard_002, BD_Mongo_Shard_003 o BD_Redis_Shard_004?
+- ¿Cuál es la dirección IP y el puerto de LB_Edge_Proxy_001 o LB_Edge_Proxy_002?
+- ¿Qué componentes o bases de datos escuchan en el puerto 5432, 3306, 27017, 6379, 9200, 443 o 8080?
+
+--------------------------------------------------------------------------------
+4. FALLAS TÉCNICAS (FallaTecnica) Y GRAVEDAD (nivelGravedad)
+--------------------------------------------------------------------------------
+- ¿A qué componente impacta Error_Conexion_Timeout, cuál es su nivelGravedad y con qué se resuelve?
+- ¿A qué componente impacta Error_HTTP_502_BadGateway, qué gravedad tiene y cómo se resuelve?
+- ¿Qué falla impacta a API_Facturacion, API_Autenticacion, API_Envios, API_Ordenes, API_Notificaciones, Docker_Analytics_Service, BD_Ordenes_Postgres, BD_Redis_Cache, Servidor_Prod_01 o Nginx_LB_Frontend?
+- ¿Cuáles son todas las fallas con nivelGravedad "CRITICO"?
+- ¿Cuáles son las fallas con nivelGravedad "ALTO", "MEDIO" o "BAJO"?
+- ¿Qué resuelve Error_CPU_Throttling_High, Error_DNS_Resolution_Failure, Error_Disk_Quota_Exceeded, Error_Out_Of_Memory_Killed, Error_Postgres_Deadlock, Error_RabbitMQ_Queue_Blocked, Error_Redis_Memory_Full o Error_SSL_Certificate_Expired?
+- ¿A qué componente impacta, qué gravedad tiene y con qué se resuelve Falla_Latencia_Alta_001?
+- ¿Qué falla es Falla_Socket_Timeout_002, Falla_Pool_Agotado_003, Falla_Disco_Lleno_004, Falla_Error_Serializacion_005 o Falla_Reintento_Excedido_006?
+- ¿Qué fallas del tipo Falla_Latencia_Alta_* o Falla_Socket_Timeout_* tienen gravedad CRITICO o ALTO?
+- ¿Qué acción resuelve Falla_Latencia_Alta_007 o Falla_Socket_Timeout_008 y cuál es su comandoCLI?
+
+--------------------------------------------------------------------------------
+5. VULNERABILIDADES DE SEGURIDAD (VulnerabilidadSeguridad) Y CÓDIGOS CVE (codigoCVE)
+--------------------------------------------------------------------------------
+- ¿Cuál es el codigoCVE, el nivelGravedad, el componente impactado y la acción que resuelve Vuln_OpenSSL_Heartbleed?
+- ¿Cuál es el código CVE y la mitigación de Vuln_Log4j_Elastic (CVE-2021-44228)?
+- ¿Qué vulnerabilidad corresponde a CVE-2019-5736 (Vuln_Docker_Escape_RunC) y qué componente afecta?
+- ¿Qué vulnerabilidad corresponde a CVE-2022-21449 (Vuln_JWT_None_Algorithm), CVE-2019-2386 (Vuln_Mongo_NoAuth), CVE-2023-44487 (Vuln_Nginx_HTTP2_Dos), CVE-2014-0160 (Vuln_OpenSSL_Heartbleed), CVE-2023-2454 (Vuln_PostgreSQL_SQLi), CVE-2022-22965 (Vuln_Spring4Shell), CVE-2023-38408 (Vuln_Ssh_Privilege_Escalation) o CVE-2024-1002 (Vuln_XSS_Reflected_Gateway)?
+- ¿Qué vulnerabilidades tienen nivelGravedad "CRITICO" o "ALTO"?
+- ¿Qué vulnerabilidad y CVE tiene Vuln_Inyeccion_SPARQL_001, qué componente impacta y con qué parche se resuelve?
+- ¿Qué vulnerabilidad es Vuln_Deserializacion_Insegura_002, Vuln_Exposicion_Tokens_003, Vuln_Escalada_Privilegios_004, Vuln_Configuracion_CORS_Abierta_005 o Vuln_Dependencia_Vulnerable_006?
+- ¿Qué código CVE tiene Vuln_Inyeccion_SPARQL_007 o Vuln_Deserializacion_Insegura_008 y qué comando CLI aplica su parche?
+
+--------------------------------------------------------------------------------
+6. ACCIONES DEVSECOPS (ComandoReparacion, ParcheSeguridad, ScriptDespliegue) Y comandoCLI
+--------------------------------------------------------------------------------
+- ¿Cuál es el comandoCLI de Fix_Reiniciar_Postgres, Fix_Flush_Redis, Fix_Restart_Nginx, Fix_Increase_Docker_RAM, Fix_Kill_Idle_Connections, Fix_Scale_Docker_Replicas, Fix_Purge_RabbitMQ_Queue, Fix_Flush_DNS_Cache, Fix_Clean_Docker_Prune o Fix_Renew_Certbot?
+- ¿Cuál es el comandoCLI de Fix_Actualizar_OpenSSL, Fix_Patch_Log4j, Fix_Enable_Mongo_Auth, Fix_Enforce_JWT_Alg, Fix_Update_Postgres_Binary, Fix_Patch_Nginx_HTTP2, Fix_Update_OpenSSH, Fix_Update_RunC, Fix_Update_Spring_Framework o Fix_Sanitize_Gateway_Inputs?
+- ¿Cuál es el comandoCLI de Script_Backup_Postgres_Daily, Script_DB_Migration_Run, Script_Deploy_Prod_Pipeline, Script_Deploy_Staging o Script_Rollback_Auth?
+- ¿Qué comando CLI ejecuta Fix_Operativo_CLI_001 o Fix_Operativo_CLI_002?
+- ¿Qué comando CLI ejecuta Parche_Seguridad_DevSecOps_001 o Parche_Seguridad_DevSecOps_002?
+- ¿Qué comando CLI ejecuta Script_Automatizacion_001 o Script_Automatizacion_002?
+- ¿Qué acciones (ComandoReparacion, ParcheSeguridad o ScriptDespliegue) usan un comando que incluya docker, nginx, postgres, redis, apt-get o alembic?
+
+--------------------------------------------------------------------------------
+7. USUARIOS DE SEGURIDAD (UsuarioSeguridad, Administrador, OperadorTI) Y tiempoExpiracion
+--------------------------------------------------------------------------------
+- ¿Cuál es el tiempoExpiracion y el rol de User_Joan_Munoz y User_Sebastian_Basto?
+- ¿Cuál es el tiempoExpiracion de User_CI_CD_Bot, User_DBA_Senior, User_DevOps_Lead, User_SecOps_Auditor o User_SysAdmin_Root?
+- ¿Cuál es el tiempoExpiracion de User_Monitoring_Agent, User_Operator_N1_Alpha, User_Operator_N1_Beta, User_Operator_N2_Delta, User_Operator_N2_Gamma, User_PenTester_External, User_Support_Dev_01 o User_Support_Dev_02?
+- ¿Qué usuarios son Administrador y cuáles tienen tiempoExpiracion de 3600 o 1800 segundos?
+- ¿Qué usuarios son OperadorTI y cuál es su tiempoExpiracion?
+- ¿Cuál es el tiempoExpiracion de User_Admin_Sentinel_001 o User_Operador_Sentinel_021?
+
+--------------------------------------------------------------------------------
+8. CONSULTAS CRUZADAS (CADENA DE RELACIONES) Y PRUEBAS DE BORDE
+--------------------------------------------------------------------------------
+- Si falla BD_Usuarios_Postgres por Error_Conexion_Timeout, ¿qué APIs se ven afectadas y qué comando repara el problema?
+- Si API_Pagos tiene Vuln_OpenSSL_Heartbleed y depende de BD_Pagos_MySQL y corre en Docker_Payment_Service, ¿en qué servidor está ese contenedor y qué comando corrige la vulnerabilidad?
+- ¿Qué servidor aloja al contenedor donde se ejecuta API_Autenticacion y qué base de datos usa?
+- ¿Qué ocurre si pregunto por Servidor_Inexistente_999, Falla_Fantasma_999 o CVE-1900-0001?
+- ¿Qué responde el chat si le pido ayuda con una receta de cocina, una tarea de historia o un cálculo financiero ajeno a DevSecOps?
+================================================================================
