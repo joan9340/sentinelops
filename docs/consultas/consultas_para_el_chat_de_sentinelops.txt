@@ -1,0 +1,118 @@
+================================================================================
+CATÁLOGO DE CONSULTAS PARA EL CHAT - SENTINELOPS
+Ontología: ontolog_a_devsecops_enriquecida_100_individuos_3.ttl
+Autores: Joan Sebastian Muñoz Bedoya y Sebastian Basto Olaya
+================================================================================
+
+--------------------------------------------------------------------------------
+1. FALLAS TÉCNICAS, GRAVEDAD Y COMANDOS CLI DE REPARACIÓN
+--------------------------------------------------------------------------------
+1.1. ¿Qué falla presenta API_Facturacion y con qué acción o comando CLI se resuelve?
+1.2. ¿Cuál es el comando CLI para resolver Error_Conexion_Timeout y qué componente impacta?
+1.3. ¿Qué acción y comando CLI corresponden a Error_Out_Of_Memory_Killed y qué contenedor afecta?
+1.4. ¿Cómo se resuelve Error_CPU_Throttling_High en Docker_Order_Service?
+1.5. ¿Qué comando CLI corrige Error_DNS_Resolution_Failure y qué API impacta?
+1.6. ¿Cuál es el comando CLI para Error_Disk_Quota_Exceeded en Servidor_Prod_01?
+1.7. ¿Cómo se resuelve Error_Postgres_Deadlock en BD_Ordenes_Postgres?
+1.8. ¿Qué acción y comando CLI resuelven Error_RabbitMQ_Queue_Blocked en API_Notificaciones?
+1.9. ¿Cómo se corrige Error_Redis_Memory_Full en BD_Redis_Cache?
+1.10. ¿Qué comando CLI soluciona Error_SSL_Certificate_Expired en Nginx_LB_Frontend?
+1.11. ¿Qué fallas técnicas tienen nivel de gravedad CRITICO?
+1.12. ¿Qué fallas técnicas tienen nivel de gravedad ALTO o MEDIO?
+
+--------------------------------------------------------------------------------
+2. VULNERABILIDADES DE SEGURIDAD (CVE), GRAVEDAD Y PARCHES
+--------------------------------------------------------------------------------
+2.1. ¿Qué código CVE tiene Vuln_Docker_Escape_RunC, qué componente impacta y qué comando lo corrige?
+2.2. ¿Qué vulnerabilidad afecta a API_Autenticacion con Vuln_JWT_None_Algorithm y cuál es su CVE?
+2.3. ¿Qué código CVE tiene Vuln_Log4j_Elastic, qué base de datos impacta y qué comando CLI lo corrige?
+2.4. ¿Qué vulnerabilidad presenta BD_Catalogo_Mongo con Vuln_Mongo_NoAuth y cómo se habilita la autenticación?
+2.5. ¿Qué vulnerabilidad impacta a Nginx_LB_Frontend con Vuln_Nginx_HTTP2_Dos y cuál es su CVE?
+2.6. ¿Qué vulnerabilidad afecta a API_Pagos con Vuln_OpenSSL_Heartbleed, cuál es su CVE y qué comando la actualiza?
+2.7. ¿Qué vulnerabilidad impacta a BD_Usuarios_Postgres con Vuln_PostgreSQL_SQLi y qué comando actualiza PostgreSQL?
+2.8. ¿Qué vulnerabilidad afecta a API_Usuarios con Vuln_Spring4Shell, cuál es su CVE y qué comando la corrige?
+2.9. ¿Qué vulnerabilidad impacta a Servidor_Prod_02 con Vuln_Ssh_Privilege_Escalation y cuál es su CVE?
+2.10. ¿Qué vulnerabilidad afecta a API_Gateway_Central con Vuln_XSS_Reflected_Gateway y cuál es su CVE?
+2.11. ¿Qué vulnerabilidades tienen nivel de gravedad CRITICO y qué parches las resuelven?
+2.12. ¿Qué vulnerabilidades tienen nivel de gravedad ALTO o MEDIO?
+
+--------------------------------------------------------------------------------
+3. APIs MICROSERVICIOS, DEPENDENCIAS, CONTENEDORES Y PUERTOS
+--------------------------------------------------------------------------------
+3.1. ¿De qué base de datos depende API_Analitica, en qué contenedor se ejecuta y en qué puerto corre?
+3.2. ¿De qué base de datos depende API_Auditoria, en qué contenedor se ejecuta y en qué puerto corre?
+3.3. ¿De qué base de datos depende API_Autenticacion, en qué contenedor se ejecuta y en qué puerto corre?
+3.4. ¿De qué base de datos depende API_Busqueda, en qué contenedor se ejecuta y en qué puerto corre?
+3.5. ¿De qué base de datos depende API_Catalogo, en qué contenedor se ejecuta y en qué puerto corre?
+3.6. ¿De qué base de datos depende API_Envios, en qué contenedor se ejecuta y en qué puerto corre?
+3.7. ¿De qué base de datos depende API_Facturacion, en qué contenedor se ejecuta y en qué puerto corre?
+3.8. ¿De qué servicio depende API_Gateway_Central, en qué contenedor se ejecuta y en qué puerto corre?
+3.9. ¿De qué base de datos depende API_Inventario, en qué contenedor se ejecuta y en qué puerto corre?
+3.10. ¿En qué contenedor y puerto se ejecuta API_Logs_Loki?
+3.11. ¿En qué contenedor y puerto se ejecuta API_Métricas_Prometheus?
+3.12. ¿En qué contenedor y puerto se ejecuta API_Notificaciones?
+3.13. ¿De qué base de datos depende API_Ordenes, en qué contenedor se ejecuta y en qué puerto corre?
+3.14. ¿De qué base de datos depende API_Pagos, en qué contenedor se ejecuta y en qué puerto corre?
+3.15. ¿De qué base de datos depende API_Usuarios, en qué contenedor se ejecuta y en qué puerto corre?
+
+--------------------------------------------------------------------------------
+4. CONTENEDORES DOCKER Y SERVIDORES WEB (ALOJAMIENTO)
+--------------------------------------------------------------------------------
+4.1. ¿En qué servidor está alojado Docker_Analytics_Service?
+4.2. ¿En qué servidor está alojado Docker_Audit_Service?
+4.3. ¿En qué servidor está alojado Docker_Auth_Service?
+4.4. ¿En qué servidor está alojado Docker_Catalog_Service?
+4.5. ¿En qué servidor está alojado Docker_Gateway_Service?
+4.6. ¿En qué servidor está alojado Docker_Inventory_Service?
+4.7. ¿En qué servidor está alojado Docker_Notification_Service?
+4.8. ¿En qué servidor está alojado Docker_Order_Service?
+4.9. ¿En qué servidor está alojado Docker_Payment_Service?
+4.10. ¿En qué servidor está alojado Docker_RabbitMQ_Cont?
+4.11. ¿En qué servidor está alojado Docker_Redis_Cache_Cont?
+4.12. ¿En qué servidor está alojado Docker_Search_Service?
+4.13. ¿En qué servidor está alojado Docker_Shipping_Service?
+4.14. ¿En qué servidor está alojado Docker_User_Service?
+4.15. ¿En qué servidor está alojado Docker_WAF_Proxy?
+4.16. ¿Qué contenedores Docker están alojados en Servidor_Prod_01, Servidor_Prod_02 y Servidor_Prod_03?
+4.17. ¿Qué contenedores Docker están alojados en Servidor_DMZ_01, Servidor_Staging_01, Servidor_Staging_02 y Servidor_Dev_01?
+
+--------------------------------------------------------------------------------
+5. BASES DE DATOS, BALANCEADORES DE CARGA Y SERVIDORES (IP Y PUERTO)
+--------------------------------------------------------------------------------
+5.1. ¿Cuál es la dirección IP y el puerto de BD_Analytics_ClickHouse?
+5.2. ¿Cuál es la dirección IP y el puerto de BD_Audit_Elasticsearch?
+5.3. ¿Cuál es la dirección IP y el puerto de BD_Catalogo_Mongo?
+5.4. ¿Cuál es la dirección IP y el puerto de BD_Dev_SQLite?
+5.5. ¿Cuál es la dirección IP y el puerto de BD_Ordenes_Postgres?
+5.6. ¿Cuál es la dirección IP y el puerto de BD_Pagos_MySQL?
+5.7. ¿Cuál es la dirección IP y el puerto de BD_Redis_Cache?
+5.8. ¿Cuál es la dirección IP y el puerto de BD_Staging_Postgres?
+5.9. ¿Cuál es la dirección IP y el puerto de BD_Usuarios_Postgres?
+5.10. ¿Cuál es la dirección IP y el puerto de BD_Vault_Secrets?
+5.11. ¿Cuál es la dirección IP y el puerto de AWS_ALB_Main, HAProxy_Core, Nginx_LB_Backend, Nginx_LB_Frontend y Traefik_Ingress_Cluster?
+5.12. ¿Cuál es la dirección IP de Servidor_Backup_01, Servidor_DMZ_01, Servidor_DMZ_02, Servidor_Dev_01, Servidor_Dev_02, Servidor_Prod_01, Servidor_Prod_02, Servidor_Prod_03, Servidor_Staging_01 y Servidor_Staging_02?
+
+--------------------------------------------------------------------------------
+6. SCRIPTS DE DESPLIEGUE Y OPERACIÓN
+--------------------------------------------------------------------------------
+6.1. ¿Cuál es el comando CLI de Script_Backup_Postgres_Daily?
+6.2. ¿Cuál es el comando CLI de Script_DB_Migration_Run?
+6.3. ¿Cuál es el comando CLI de Script_Deploy_Prod_Pipeline?
+6.4. ¿Cuál es el comando CLI de Script_Deploy_Staging?
+6.5. ¿Cuál es el comando CLI de Script_Rollback_Auth?
+
+--------------------------------------------------------------------------------
+7. USUARIOS DE SEGURIDAD Y TIEMPO DE EXPIRACIÓN
+--------------------------------------------------------------------------------
+7.1. ¿Cuál es el tiempo de expiración de User_Joan_Munoz, User_Sebastian_Basto y User_SecOps_Auditor?
+7.2. ¿Cuál es el tiempo de expiración de User_CI_CD_Bot, User_DBA_Senior, User_DevOps_Lead y User_SysAdmin_Root?
+7.3. ¿Cuál es el tiempo de expiración de User_Monitoring_Agent, User_Operator_N1_Alpha, User_Operator_N1_Beta, User_Operator_N2_Delta, User_Operator_N2_Gamma, User_PenTester_External, User_Support_Dev_01 y User_Support_Dev_02?
+7.4. ¿Qué usuarios pertenecen a Administrador y cuáles a OperadorTI?
+
+--------------------------------------------------------------------------------
+8. CONSULTAS FUERA DE DOMINIO (PRUEBA ANTI-ALUCINACIÓN)
+--------------------------------------------------------------------------------
+8.1. ¿Cómo configurar un servidor IIS en Windows Server 2016?
+8.2. ¿Qué comando optimiza una base de datos Oracle en Solaris?
+8.3. ¿Cuál es la receta de una pizza hawaiana?
+================================================================================
