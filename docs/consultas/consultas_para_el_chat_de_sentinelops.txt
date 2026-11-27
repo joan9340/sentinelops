@@ -3,7 +3,13 @@ CATÁLOGO DE CONSULTAS PARA EL CHAT - SENTINELOPS
 Ontología: ontolog_a_devsecops_enriquecida_100_individuos_3.ttl
 Autores: Joan Sebastian Muñoz Bedoya y Sebastian Basto Olaya
 ================================================================================
-
+1. Pruebas en la consola de SentinelOps (flujo GraphRAG completo)
+Falla crítica de conexión y base de datos: escribe "Tengo un Error_Conexion_Timeout en API_Autenticacion" y revisa que devuelva gravedad CRITICO, el componente API Autenticacion y el comando CLI vinculado a :Fix_Reiniciar_Postgres.  
+Bloqueo de base de datos: prueba "Hay un Error_Postgres_Deadlock en BD_Ordenes_Postgres" para verificar el comando asociado a :Fix_Kill_Idle_Connections.  
+Certificado SSL vencido: envía "El balanceador Nginx_LB_Frontend reporta Error_SSL_Certificate_Expired" y comprueba que recupere la acción de :Fix_Renew_Certbot.  
+Vulnerabilidad CVE conocida: consulta "¿Qué parche aplica para CVE-2021-44228 o Vuln_Log4j_Elastic en BD_Audit_Elasticsearch?" o "Mitigación para CVE-2022-21449 en API_Autenticacion" para validar que el filtro SPARQL busca también sobre codigoCVE.  
+Prueba bilingüe (inglés): cambia el idioma a EN y envía "How do I solve Error_Conexion_Timeout on API_Autenticacion?" para comprobar que el texto redactado salga en inglés conservando los datos del grafo.  
+Rechazo fuera de dominio (anti-alucinaciones): pregunta "¿Cuál es la capital de Francia?" o "Dame una receta de cocina" y verifica que responda 0% (Fuera de Dominio) sin inventar comandos CLI.
 --------------------------------------------------------------------------------
 1. FALLAS TÉCNICAS, GRAVEDAD Y COMANDOS CLI DE REPARACIÓN
 --------------------------------------------------------------------------------
